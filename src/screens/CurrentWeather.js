@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, SafeAreaView, StyleSheet} from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, Platform, StatusBar} from 'react-native'
 import {Feather } from '@expo/vector-icons';
 
 function CurrentWeather() {
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     backgroundColor: "orange",
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   },
   container: {
     flex: 1,
